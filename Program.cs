@@ -1,143 +1,131 @@
-﻿using assi_2;
-using System.Runtime.InteropServices;
-//#region Q1
-//person p5 = new person(3);
-//internal struct person
+﻿//using DEMO_OOP2;
+//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+
+//namespace DEMO_OOP2
 //{
-//    private int[] age;
-//    private string[] name;
-//    private int size;
-//    public int Size { get; }
-
-//    public person(int size)
+//    internal struct employees
 //    {
-//        Size = size;
-//        age = new int[size];
-//        name = new string[size];
-//    }
+//        //    #region atributes
+//        //    private int id;
+//        //    private string name;
+//        //    private decimal empsalary;
+//        //    #endregion
+//        //    #region constructor
+//        //    public employees(int Id, string Name, decimal salary)
+//        //    {
+//        //        id = Id;
+//        //        name = Name;
+//        //        Salary = salary;
+//        //    }
+//        //    #endregion
+//        //    #region methods
+//        //    public override string ToString()
+//        //    {
+//        //        return $" id = {id} \n name = {name} \n salary = {empsalary:c}";
+//        //    }
+//        //    #endregion
 
-//    public void addperson(int pos, int age1, string name1)
-//    {
-//        if (age is not null && name is not null)
-//        {
-//            if (pos <= Size)
-//            {
-//                age[pos - 1] = age1;
-//                name[pos - 1] = name1;
-//            }
-//        }
-//    }
-//    public void disblay()
-//    {
-//        for (int i = 0; i < age.Length; i++)
-//        {
-//            Console.WriteLine($"age = {age[i]} name = {name[i]}");
-//        }
-//    }
+//        //    public string getname()
+//        //    {
+//        //        return name ;
+//        //    }
 
-//}
-//----------------main---------------------
-//p5.addperson(1, 50, "samy");
-//p5.addperson(2, 25, "adel");
-//p5.addperson(3, 30, "fady");
-//p5.disblay();
-//#endregion
-#region q2
+//        //    public void setname(string Name)
+//        //    { 
+//        //        name = Name;
+//        //    }
 
-//internal struct person
-//{
-//    private int age;
-//    private string name;
+//        //    public int age
+//        //    {
+//        //        get; , set;
+//        //    }
+//        //    public decimal Salary
+//        //    {
+//        //        set
+//        //        {
+//        //            empsalary = value;
+//        //        }
+//        //        get
+//        //        {
+//        //            return Salary;
+//        //        }
+//        //    }
+//        // }
 
-//    public int Age { set; get; }
-//    public string Name { set; get; }
-
-//}
-//}
-
-//-----------main-------------
-//person[] persons = new person[3];
-//persons[0].Name = Console.ReadLine();
-//persons[0].Age = int.Parse(Console.ReadLine());
-//persons[1].Name = Console.ReadLine();
-//persons[1].Age = int.Parse(Console.ReadLine());
-//persons[2].Name = Console.ReadLine();
-//persons[2].Age = int.Parse(Console.ReadLine());
-//person oldestperson =new person();
-//oldestperson.Age = 0;
-//int i = 0;
-
-//while (i< persons.Length)
-//{
-//    if (persons[i].Age > oldestperson.Age)
-//    {
-//        oldestperson= persons[i]; 
-//    }
-//    i++;
-//}
-//Console.WriteLine($"age = {oldestperson.Age} ---- name = {oldestperson.Name}");
-
-#endregion
-
-#region q3
-//internal class employees
-//{
-//    public int ID { get; set; }
-//    public string Name { get; set; }
-//    public int salary { get; set; }
-//    public hiredate hiredate { get; set; }
-//    public security_level security_level { get; set; }
-//    public gender gender;
-//    public override string ToString()
-//    {
-//        return $"id = {ID} name = {Name} security = {security_level} gender = {gender} salary = {salary}:c";
 //    }
 //}
-//internal class hiredate
-//{
 
-//    private int Month;
-//    private int Year;
-//    private int Day;
+namespace oop00
+{
+    internal class prog
+    {
+        static void Main(string[] args)
+        {
+            // //employees employee = new employees(20,"fady", 1500);
+            // employees employee = new employees(Salary: 533, Name: "fares ", Id: 66);
+            // Console.WriteLine(employee.ToString());
+            //employee.setname("fady");
+            // Console.WriteLine(employee.getname());
 
-//    public hiredate()
-//    {
-//    }
 
-//    public hiredate(int month, int year, int day)
-//    {
-//        this.Month = month;
-//        this.Year = year;
-//        this.Day = day;
-//    }
-//    public int year { set; get; }
-//    public int month { set; get; }
-//    public int day { set; get; }
-//}
-//internal enum gender
-//{
-//    Male = 1, Female = 2
-//}
-//internal enum security_level
-//{
-//    guest = 1, Developer = 2, secretary = 3, DBA = 4
-//}
-//----------------MAIN----------------------
-//employees [] emp = new employees[3];
-//emp[0].ID = 5;
-//emp[0].Name = "fady";
-//emp[0].salary = 500;
-//emp[0].gender = gender.Male;
-//emp[0].hiredate = new hiredate(5, 2005, 16);
-//emp[1].ID = 6;
-//emp[1].Name = "emad";
-//emp[1].salary = 5000;
-//emp[1].gender = gender.Male;
-//emp[1].hiredate = new hiredate(5,2008, 6);
-//emp[2].ID = 5;
-//emp[2].Name = "adel";
-//emp[2].salary = 5882;
-//emp[2].gender = gender.Male;
-//emp[2].hiredate = new hiredate(1, 2005, 1);
-//;
-#endregion
+            phonebook note = new phonebook(5);
+            note.addperson(0, 01, "fady");
+            note.addperson(1, 02, "fares");
+            note.addperson(2, 03, "ahmed");
+            Console.WriteLine(note.getnumber("ahmed"));
+        }
+    }
+
+
+
+
+    internal struct phonebook
+    {
+        #region atribute
+        private int[] num;
+        private string[] name;
+        private int size;
+        #endregion
+        public int Size { get; }
+        public phonebook(int size)
+        {
+            Size = size;
+            num = new int[size];
+            name = new string[size];
+        }
+        public void addperson(int position, int number, string name1)
+        {
+            if (num is not null && name is not null)
+            {
+                if (position < Size)
+                {
+                    num[position] = number;
+                    name[position] = name1;
+                }
+            }
+        }
+        public int getnumber(string name2)
+        {
+            int i = 0;
+            while (i < name.Length)
+            {
+                if (name[i] == name2)
+                {
+                    return num[i];
+
+                }
+                else
+                {
+                    i++;
+                }
+            }
+            return -1;
+
+        }
+    }
+
+}
